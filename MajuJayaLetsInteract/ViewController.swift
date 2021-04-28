@@ -15,5 +15,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func didTapCountInteractButton(_ sender: Any) {
+        let actionSheet = UIAlertController(title: nil, message: "Add interaction count", preferredStyle: .actionSheet)
+        
+        
+    }
 }
 

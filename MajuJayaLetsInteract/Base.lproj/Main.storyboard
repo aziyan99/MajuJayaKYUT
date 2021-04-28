@@ -86,6 +86,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <state key="normal" title="Count Interact!!"/>
+                                <connections>
+                                    <action selector="didTapCountInteractButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3XY-mw-cvS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdH-s3-bRn">
                                 <rect key="frame" x="297" y="357" width="77" height="30"/>
