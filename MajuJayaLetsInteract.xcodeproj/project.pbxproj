@@ -14,8 +14,6 @@
 		08D2EEE32639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEE12639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld */; };
 		08D2EEE52639B4AA0013D5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08D2EEE42639B4AA0013D5EF /* Assets.xcassets */; };
 		08D2EEE82639B4AA0013D5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D2EEE62639B4AA0013D5EF /* LaunchScreen.storyboard */; };
-		08D2EEF22639B5470013D5EF /* Interacts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEF02639B5470013D5EF /* Interacts+CoreDataClass.swift */; };
-		08D2EEF32639B5470013D5EF /* Interacts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEF12639B5470013D5EF /* Interacts+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,10 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08D2EEF22639B5470013D5EF /* Interacts+CoreDataClass.swift in Sources */,
 				08D2EEDD2639B4AA0013D5EF /* ViewController.swift in Sources */,
 				08D2EED92639B4AA0013D5EF /* AppDelegate.swift in Sources */,
-				08D2EEF32639B5470013D5EF /* Interacts+CoreDataProperties.swift in Sources */,
 				08D2EEDB2639B4AA0013D5EF /* SceneDelegate.swift in Sources */,
 				08D2EEE32639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld in Sources */,
 			);
