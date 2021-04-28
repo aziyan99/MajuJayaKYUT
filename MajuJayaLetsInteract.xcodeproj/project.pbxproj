@@ -14,6 +14,13 @@
 		08D2EEE32639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEE12639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld */; };
 		08D2EEE52639B4AA0013D5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08D2EEE42639B4AA0013D5EF /* Assets.xcassets */; };
 		08D2EEE82639B4AA0013D5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D2EEE62639B4AA0013D5EF /* LaunchScreen.storyboard */; };
+		FCF6C0C82639C4CE003C3D38 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */; };
+		FCF6C0CD2639CDD4003C3D38 /* FirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0CC2639CDD4003C3D38 /* FirstStepViewController.swift */; };
+		FCF6C0CF2639CF2B003C3D38 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0CE2639CF2B003C3D38 /* MainPageViewController.swift */; };
+		FCF6C0D92639DD14003C3D38 /* LandscapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0D82639DD14003C3D38 /* LandscapeManager.swift */; };
+		FCF6C0DB2639E07C003C3D38 /* ConciergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0DA2639E07C003C3D38 /* ConciergeViewController.swift */; };
+		FCF6C0DD2639E246003C3D38 /* SecondStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0DC2639E246003C3D38 /* SecondStepViewController.swift */; };
+		FCF6C0DF2639E26F003C3D38 /* ThirdStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0DE2639E26F003C3D38 /* ThirdStepViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		08D2EEE92639B4AA0013D5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08D2EEF02639B5470013D5EF /* Interacts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interacts+CoreDataClass.swift"; sourceTree = "<group>"; };
 		08D2EEF12639B5470013D5EF /* Interacts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interacts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		FCF6C0CC2639CDD4003C3D38 /* FirstStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepViewController.swift; sourceTree = "<group>"; };
+		FCF6C0CE2639CF2B003C3D38 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		FCF6C0D82639DD14003C3D38 /* LandscapeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeManager.swift; sourceTree = "<group>"; };
+		FCF6C0DA2639E07C003C3D38 /* ConciergeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciergeViewController.swift; sourceTree = "<group>"; };
+		FCF6C0DC2639E246003C3D38 /* SecondStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepViewController.swift; sourceTree = "<group>"; };
+		FCF6C0DE2639E26F003C3D38 /* ThirdStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdStepViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +80,27 @@
 				08D2EEDA2639B4AA0013D5EF /* SceneDelegate.swift */,
 				08D2EEDC2639B4AA0013D5EF /* ViewController.swift */,
 				08D2EEDE2639B4AA0013D5EF /* Main.storyboard */,
+				FCF6C0DA2639E07C003C3D38 /* ConciergeViewController.swift */,
+				FCF6C0D82639DD14003C3D38 /* LandscapeManager.swift */,
 				08D2EEE42639B4AA0013D5EF /* Assets.xcassets */,
+				FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */,
 				08D2EEE62639B4AA0013D5EF /* LaunchScreen.storyboard */,
 				08D2EEE92639B4AA0013D5EF /* Info.plist */,
+				FCF6C0C92639CD41003C3D38 /* OnboardingController */,
 				08D2EEE12639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld */,
 			);
 			path = MajuJayaLetsInteract;
+			sourceTree = "<group>";
+		};
+		FCF6C0C92639CD41003C3D38 /* OnboardingController */ = {
+			isa = PBXGroup;
+			children = (
+				FCF6C0CE2639CF2B003C3D38 /* MainPageViewController.swift */,
+				FCF6C0CC2639CDD4003C3D38 /* FirstStepViewController.swift */,
+				FCF6C0DC2639E246003C3D38 /* SecondStepViewController.swift */,
+				FCF6C0DE2639E26F003C3D38 /* ThirdStepViewController.swift */,
+			);
+			path = OnboardingController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +163,7 @@
 				08D2EEE82639B4AA0013D5EF /* LaunchScreen.storyboard in Resources */,
 				08D2EEE52639B4AA0013D5EF /* Assets.xcassets in Resources */,
 				08D2EEE02639B4AA0013D5EF /* Main.storyboard in Resources */,
+				FCF6C0C82639C4CE003C3D38 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +176,14 @@
 			files = (
 				08D2EEDD2639B4AA0013D5EF /* ViewController.swift in Sources */,
 				08D2EED92639B4AA0013D5EF /* AppDelegate.swift in Sources */,
+				FCF6C0DF2639E26F003C3D38 /* ThirdStepViewController.swift in Sources */,
+				FCF6C0CD2639CDD4003C3D38 /* FirstStepViewController.swift in Sources */,
 				08D2EEDB2639B4AA0013D5EF /* SceneDelegate.swift in Sources */,
+				FCF6C0CF2639CF2B003C3D38 /* MainPageViewController.swift in Sources */,
+				FCF6C0DB2639E07C003C3D38 /* ConciergeViewController.swift in Sources */,
 				08D2EEE32639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld in Sources */,
+				FCF6C0D92639DD14003C3D38 /* LandscapeManager.swift in Sources */,
+				FCF6C0DD2639E246003C3D38 /* SecondStepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
