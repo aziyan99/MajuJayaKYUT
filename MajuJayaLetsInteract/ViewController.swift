@@ -9,9 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topDateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        updateTopDate()
     }
 
 
@@ -25,6 +28,15 @@ class ViewController: UIViewController {
         
         self.present(actionSheet, animated: true, completion: nil)
         
+    }
+    
+    func updateTopDate() {
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, d MMM"
+        let dateString: String = dateFormatter.string(from: today)
+        
+        topDateLabel.text = dateString.uppercased()
     }
 }
 
