@@ -14,17 +14,29 @@ class ViewController: UIViewController {
     var currentProgress: Float = 0.0
     private var todayInteractions = [Interacts]()
     
+    
     @IBOutlet weak var topDateLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var countProgressView: UIProgressView!
     @IBOutlet weak var bottomCountLabel: UILabel!
+    
+    /*
+     * temp variable
+     */
+    
+    @IBOutlet weak var imgBadges1: UIImageView!
+    @IBOutlet weak var imgBadges2: UIImageView!
+    @IBOutlet weak var imgBadges3: UIImageView!
+    @IBOutlet weak var imgBadges4: UIImageView!
+    @IBOutlet weak var imgBadges5: UIImageView!
+    @IBOutlet weak var imgBadges6: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchInteractionsData()
         prepareView()
-        
+        prepareBadges()
     }
 
     /*
@@ -40,7 +52,6 @@ class ViewController: UIViewController {
         actionSheet.addAction(cancelButton)
         
         self.present(actionSheet, animated: true, completion: nil)
-        
     }
     
     /*
@@ -61,13 +72,76 @@ class ViewController: UIViewController {
         let perProgress = countProgressView.frame.width / 6
         currentProgress = Float(todayInteractions.count) * Float(perProgress)
         
-        countProgressView.setProgress(currentProgress / Float(countProgressView.frame.width), animated: false)
         
+        if(CGFloat(currentProgress) <= countProgressView.frame.width){
+            countProgressView.setProgress(0.0, animated: false)
+            countProgressView.setProgress(currentProgress / Float(countProgressView.frame.width), animated: false)
+        }
+        else if(CGFloat(currentProgress) > countProgressView.frame.width && CGFloat(currentProgress) <= (countProgressView.frame.width * 5.0)){
+            countProgressView.trackTintColor = .systemBlue
+            countProgressView.progressTintColor = .systemOrange
+            countProgressView.setProgress(0.0, animated: false)
+            
+            countProgressView.setProgress((currentProgress - Float(countProgressView.frame.width)) / (Float(countProgressView.frame.width * 5.0) - (Float(countProgressView.frame.width))), animated: false)
+
+            countLabel.textColor = .systemOrange
+
+        }else if (CGFloat(currentProgress) > countProgressView.frame.width * 5.0){
+            countProgressView.trackTintColor = .systemOrange
+            countProgressView.progressTintColor = .systemPink
+
+            countProgressView.setProgress(0.0, animated: false)
+            countProgressView.setProgress((currentProgress - Float(countProgressView.frame.width * 5.0)) / (Float(countProgressView.frame.width * 10.0) - (Float(countProgressView.frame.width) * 5.0)), animated: false)
+
+            countLabel.textColor = .systemPink
+        }
     }
     
     
     func increaseCount(alert: UIAlertAction!) {
         storeInteractionData()
+        fetchInteractionsData()
+        prepareView()
+        prepareBadges()
+        
+    }
+    
+    func prepareBadges() {
+        let todayCount = todayInteractions.count
+        if(todayCount >= 1){
+            imgBadges1.image = UIImage(named: "sample")
+        }
+        if(todayCount >= 3){
+            imgBadges1.image = UIImage(named: "sample")
+            imgBadges2.image = UIImage(named: "sample")
+        }
+        if(todayCount >= 6){
+            imgBadges1.image = UIImage(named: "sample")
+            imgBadges2.image = UIImage(named: "sample")
+            imgBadges3.image = UIImage(named: "sample")
+        }
+        if(todayCount >= 12){
+            imgBadges1.image = UIImage(named: "sample")
+            imgBadges2.image = UIImage(named: "sample")
+            imgBadges3.image = UIImage(named: "sample")
+            imgBadges4.image = UIImage(named: "sample")
+        }
+        if(todayCount >= 18){
+            imgBadges1.image = UIImage(named: "sample")
+            imgBadges2.image = UIImage(named: "sample")
+            imgBadges3.image = UIImage(named: "sample")
+            imgBadges4.image = UIImage(named: "sample")
+            imgBadges5.image = UIImage(named: "sample")
+        }
+        if(todayCount >= 24){
+            imgBadges1.image = UIImage(named: "sample")
+            imgBadges2.image = UIImage(named: "sample")
+            imgBadges3.image = UIImage(named: "sample")
+            imgBadges4.image = UIImage(named: "sample")
+            imgBadges5.image = UIImage(named: "sample")
+            imgBadges6.image = UIImage(named: "sample")
+            print("breakkkkk!!!!")
+        }
     }
     
     /*
@@ -106,8 +180,6 @@ class ViewController: UIViewController {
         
         do{
             try context.save()
-            fetchInteractionsData()
-            prepareView()
         }catch{
             print("Error when saving data")
         }
