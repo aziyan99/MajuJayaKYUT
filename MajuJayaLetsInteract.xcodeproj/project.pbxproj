@@ -14,6 +14,8 @@
 		08D2EEE32639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEE12639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld */; };
 		08D2EEE52639B4AA0013D5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08D2EEE42639B4AA0013D5EF /* Assets.xcassets */; };
 		08D2EEE82639B4AA0013D5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D2EEE62639B4AA0013D5EF /* LaunchScreen.storyboard */; };
+		08D2EF30263A58430013D5EF /* Interacts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEF02639B5470013D5EF /* Interacts+CoreDataClass.swift */; };
+		08D2EF31263A58430013D5EF /* Interacts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEF12639B5470013D5EF /* Interacts+CoreDataProperties.swift */; };
 		FCF6C0C82639C4CE003C3D38 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */; };
 		FCF6C0CD2639CDD4003C3D38 /* FirstStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0CC2639CDD4003C3D38 /* FirstStepViewController.swift */; };
 		FCF6C0CF2639CF2B003C3D38 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6C0CE2639CF2B003C3D38 /* MainPageViewController.swift */; };
@@ -74,8 +76,7 @@
 		08D2EED72639B4AA0013D5EF /* MajuJayaLetsInteract */ = {
 			isa = PBXGroup;
 			children = (
-				08D2EEF02639B5470013D5EF /* Interacts+CoreDataClass.swift */,
-				08D2EEF12639B5470013D5EF /* Interacts+CoreDataProperties.swift */,
+				08D2EF2E263A58060013D5EF /* Data */,
 				08D2EED82639B4AA0013D5EF /* AppDelegate.swift */,
 				08D2EEDA2639B4AA0013D5EF /* SceneDelegate.swift */,
 				08D2EEDC2639B4AA0013D5EF /* ViewController.swift */,
@@ -90,6 +91,15 @@
 				08D2EEE12639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld */,
 			);
 			path = MajuJayaLetsInteract;
+			sourceTree = "<group>";
+		};
+		08D2EF2E263A58060013D5EF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				08D2EEF02639B5470013D5EF /* Interacts+CoreDataClass.swift */,
+				08D2EEF12639B5470013D5EF /* Interacts+CoreDataProperties.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		FCF6C0C92639CD41003C3D38 /* OnboardingController */ = {
@@ -174,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D2EF30263A58430013D5EF /* Interacts+CoreDataClass.swift in Sources */,
+				08D2EF31263A58430013D5EF /* Interacts+CoreDataProperties.swift in Sources */,
 				08D2EEDD2639B4AA0013D5EF /* ViewController.swift in Sources */,
 				08D2EED92639B4AA0013D5EF /* AppDelegate.swift in Sources */,
 				FCF6C0DF2639E26F003C3D38 /* ThirdStepViewController.swift in Sources */,
