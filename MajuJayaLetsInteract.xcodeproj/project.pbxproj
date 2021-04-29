@@ -81,13 +81,13 @@
 				08D2EEDA2639B4AA0013D5EF /* SceneDelegate.swift */,
 				08D2EEDC2639B4AA0013D5EF /* ViewController.swift */,
 				08D2EEDE2639B4AA0013D5EF /* Main.storyboard */,
+				FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */,
+				FCF6C0C92639CD41003C3D38 /* OnboardingController */,
 				FCF6C0DA2639E07C003C3D38 /* ConciergeViewController.swift */,
 				FCF6C0D82639DD14003C3D38 /* LandscapeManager.swift */,
 				08D2EEE42639B4AA0013D5EF /* Assets.xcassets */,
-				FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */,
 				08D2EEE62639B4AA0013D5EF /* LaunchScreen.storyboard */,
 				08D2EEE92639B4AA0013D5EF /* Info.plist */,
-				FCF6C0C92639CD41003C3D38 /* OnboardingController */,
 				08D2EEE12639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld */,
 			);
 			path = MajuJayaLetsInteract;
