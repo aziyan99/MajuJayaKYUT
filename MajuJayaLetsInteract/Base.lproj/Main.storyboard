@@ -248,7 +248,9 @@
                             <constraint firstItem="CL0-HE-mRh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OtV-Dd-Y8Y"/>
                             <constraint firstItem="Gzu-EZ-1o4" firstAttribute="top" secondItem="CL0-HE-mRh" secondAttribute="bottom" constant="8" id="Qzt-dZ-eR4"/>
                             <constraint firstItem="CL0-HE-mRh" firstAttribute="leading" secondItem="djx-1w-lIu" secondAttribute="leading" id="c3w-uB-bwt"/>
+                            <constraint firstItem="gBs-37-1qa" firstAttribute="top" secondItem="KdH-s3-bRn" secondAttribute="bottom" constant="2" id="f8A-zb-fEd"/>
                             <constraint firstItem="gBs-37-1qa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gLw-Xo-BIk"/>
+                            <constraint firstItem="djx-1w-lIu" firstAttribute="top" secondItem="Gzu-EZ-1o4" secondAttribute="bottom" constant="20" id="hko-Rb-614"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBs-37-1qa" secondAttribute="trailing" constant="16" id="i77-2u-xu5"/>
                             <constraint firstItem="nRU-wv-P4U" firstAttribute="top" secondItem="1AZ-Ad-1eb" secondAttribute="bottom" constant="8" id="kJ0-lp-hmZ"/>
                             <constraint firstItem="LhL-IW-KKx" firstAttribute="top" secondItem="nRU-wv-P4U" secondAttribute="bottom" constant="28" id="kpo-35-aGc"/>
