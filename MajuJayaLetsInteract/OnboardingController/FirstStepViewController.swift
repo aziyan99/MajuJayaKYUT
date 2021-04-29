@@ -11,10 +11,10 @@ class FirstStepViewController: UIViewController {
     
     @IBOutlet weak var buttonNext: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonNext.layer.cornerRadius = 10
+        
     }
     
   
