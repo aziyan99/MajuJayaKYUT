@@ -20,6 +20,7 @@ extension Interacts {
     @NSManaged public var name: String?
     @NSManaged public var reflections: String?
     @NSManaged public var date: Date?
+    @NSManaged public var id: String?
 
 }
 

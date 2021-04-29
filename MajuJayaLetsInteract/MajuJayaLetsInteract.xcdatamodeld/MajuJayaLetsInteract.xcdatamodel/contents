@@ -3,10 +3,11 @@
     <entity name="Interacts" representedClassName="Interacts" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="reflections" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Interacts" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Interacts" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

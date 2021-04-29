@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var initCount: Int = 0
     var currentProgress: Float = 0.0
+    private var todayCount = [Interacts]()
 
     @IBOutlet weak var topDateLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
@@ -26,6 +27,13 @@ class ViewController: UIViewController {
         countLabel.text = "\(initCount)"
         countProgressView.setProgress(0, animated: true)
         bottomCountLabel.text = "\(initCount) of 6"
+        
+        
+        //setupTodayCount()
+        fetchInteractionsData()
+        
+//        let tes = todayCount.filter { $0.isEqual() }
+//        print(tes)
     }
 
 
@@ -65,6 +73,58 @@ class ViewController: UIViewController {
         
         countProgressView.setProgress(currentProgress / Float(countProgressView.frame.width), animated: false)
         
+        storeTodayCount()
+        
+    }
+    
+    /*
+     Core data function
+     */
+    
+    func setupTodayCount() {
+        let newCount = Interacts(context: context)
+        newCount.name = ""
+        newCount.reflections = ""
+        newCount.count = 0
+        newCount.date = Date()
+        
+        do{
+            try context.save()
+        }catch{
+            //error
+        }
+    }
+    
+    func fetchInteractionsData(){
+        //let todayDate = Date()
+        do{
+            todayCount = try context.fetch(Interacts.fetchRequest())
+        }catch{
+            //error
+        }
+        print(todayCount)
+    }
+    
+    func getTodayCount(){
+        //
+    }
+    
+    func storeTodayCount() {
+        let newCount = Interacts(context: context)
+        newCount.name = ""
+        newCount.reflections = ""
+        newCount.count = 0
+        newCount.date = Date()
+        newCount.id = UUID().uuidString
+        
+        do{
+            try context.save()
+            fetchInteractionsData()
+        }catch{
+            //error
+        }
+        
+        print(todayCount)
     }
 }
 
