@@ -32,7 +32,6 @@ class MainPageViewController: UIPageViewController {
           self.setViewControllers([self.viewControllerList[self.currentIndex + 1]], direction: .forward, animated: true, completion: nil)
             currentIndex += 1
             
-            print(currentIndex)
         }
     }
     
