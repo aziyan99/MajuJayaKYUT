@@ -30,7 +30,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qlI-hU-Yli"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.93439135009999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -57,11 +57,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZuS-34-GGn">
+                                <rect key="frame" x="134" y="675" width="122" height="27"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemOrangeColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentPage">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hse-ng-T8g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mMx-9k-0fX" firstAttribute="centerY" secondItem="jmM-o1-3kA" secondAttribute="centerY" multiplier="0.5" id="1gT-Yx-ddO"/>
+                            <constraint firstItem="ZuS-34-GGn" firstAttribute="leading" secondItem="hse-ng-T8g" secondAttribute="leading" constant="134" id="EV5-J9-wxL"/>
                             <constraint firstItem="mMx-9k-0fX" firstAttribute="leading" secondItem="hse-ng-T8g" secondAttribute="leading" constant="70" id="H0k-7w-1cd"/>
                             <constraint firstItem="vLt-Ah-Uwc" firstAttribute="top" secondItem="mMx-9k-0fX" secondAttribute="bottom" constant="32" id="L9z-OL-Kyu"/>
                             <constraint firstItem="GEz-S6-BS6" firstAttribute="leading" secondItem="Q4f-Pt-mYb" secondAttribute="leading" id="N1E-HO-Qt0"/>
@@ -71,8 +82,10 @@
                             <constraint firstItem="hse-ng-T8g" firstAttribute="trailing" secondItem="Q4f-Pt-mYb" secondAttribute="trailing" constant="37" id="UBl-p9-Nag"/>
                             <constraint firstItem="GEz-S6-BS6" firstAttribute="trailing" secondItem="Q4f-Pt-mYb" secondAttribute="trailing" id="V3l-Nf-4YZ"/>
                             <constraint firstItem="hse-ng-T8g" firstAttribute="trailing" secondItem="mMx-9k-0fX" secondAttribute="trailing" constant="70" id="bmd-TN-a6e"/>
+                            <constraint firstItem="GEz-S6-BS6" firstAttribute="top" secondItem="ZuS-34-GGn" secondAttribute="bottom" constant="36" id="cwQ-Ht-NQP"/>
                             <constraint firstItem="Q4f-Pt-mYb" firstAttribute="top" secondItem="vLt-Ah-Uwc" secondAttribute="bottom" constant="19" id="eVZ-K8-8Gv"/>
                             <constraint firstItem="hse-ng-T8g" firstAttribute="trailing" secondItem="vLt-Ah-Uwc" secondAttribute="trailing" constant="37" id="nLE-l8-TpI"/>
+                            <constraint firstItem="hse-ng-T8g" firstAttribute="trailing" secondItem="ZuS-34-GGn" secondAttribute="trailing" constant="134" id="qTV-mJ-FNy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,7 +110,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="DfS-BG-OkM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.93439135009999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -129,16 +142,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PyR-AN-6mO">
+                                <rect key="frame" x="134" y="675" width="122" height="27"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemOrangeColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentPage">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zh5-xb-k9D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PyR-AN-6mO" firstAttribute="leading" secondItem="Zh5-xb-k9D" secondAttribute="leading" constant="134" id="7Yc-EL-z6U"/>
+                            <constraint firstItem="Zh5-xb-k9D" firstAttribute="trailing" secondItem="PyR-AN-6mO" secondAttribute="trailing" constant="134" id="Eih-h5-rDY"/>
                             <constraint firstItem="K80-d8-uoX" firstAttribute="leading" secondItem="azM-5b-G9I" secondAttribute="leading" constant="-8" id="Gsn-4T-Uxb"/>
                             <constraint firstItem="azM-5b-G9I" firstAttribute="leading" secondItem="Zh5-xb-k9D" secondAttribute="leading" constant="37" id="HKQ-o5-DdD"/>
                             <constraint firstItem="jax-dw-elb" firstAttribute="centerY" secondItem="S4f-X8-3T8" secondAttribute="centerY" multiplier="0.5" id="OXA-co-Liy"/>
                             <constraint firstItem="IGx-sl-UIj" firstAttribute="top" secondItem="jax-dw-elb" secondAttribute="bottom" constant="32" id="U6G-tP-Gkg"/>
                             <constraint firstItem="azM-5b-G9I" firstAttribute="top" secondItem="IGx-sl-UIj" secondAttribute="bottom" constant="19" id="bz7-xJ-heS"/>
                             <constraint firstItem="IGx-sl-UIj" firstAttribute="leading" secondItem="Zh5-xb-k9D" secondAttribute="leading" constant="37" id="ccG-Sf-ffJ"/>
+                            <constraint firstItem="K80-d8-uoX" firstAttribute="top" secondItem="PyR-AN-6mO" secondAttribute="bottom" constant="36" id="cwo-dm-NdG"/>
                             <constraint firstItem="Zh5-xb-k9D" firstAttribute="bottom" secondItem="K80-d8-uoX" secondAttribute="bottom" constant="24" id="e1m-sa-sPA"/>
                             <constraint firstItem="Zh5-xb-k9D" firstAttribute="trailing" secondItem="azM-5b-G9I" secondAttribute="trailing" constant="37" id="kSQ-A1-Wb9"/>
                             <constraint firstItem="jax-dw-elb" firstAttribute="leading" secondItem="Zh5-xb-k9D" secondAttribute="leading" constant="70" id="p78-7B-MvK"/>
@@ -166,7 +192,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="E1I-uI-vcI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.93439135009999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -198,17 +224,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7cu-eK-moU">
+                                <rect key="frame" x="134" y="675.66666666666663" width="122" height="26.333333333333371"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemOrangeColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentPage">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r6k-hd-31Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="r6k-hd-31Y" firstAttribute="trailing" secondItem="Ngb-cb-zpY" secondAttribute="trailing" constant="37" id="0kJ-PP-5VR"/>
                             <constraint firstItem="yav-Za-Xmk" firstAttribute="leading" secondItem="r6k-hd-31Y" secondAttribute="leading" constant="70" id="61c-iY-kEM"/>
+                            <constraint firstItem="r6k-hd-31Y" firstAttribute="trailing" secondItem="7cu-eK-moU" secondAttribute="trailing" constant="134" id="A7D-1f-snw"/>
                             <constraint firstItem="f2K-Gd-U3X" firstAttribute="top" secondItem="yav-Za-Xmk" secondAttribute="bottom" constant="32" id="CgX-In-FX8"/>
                             <constraint firstItem="r6k-hd-31Y" firstAttribute="trailing" secondItem="yav-Za-Xmk" secondAttribute="trailing" constant="70" id="G7o-sa-LhK"/>
+                            <constraint firstItem="7cu-eK-moU" firstAttribute="leading" secondItem="r6k-hd-31Y" secondAttribute="leading" constant="134" id="GIc-SL-9Bu"/>
                             <constraint firstItem="r6k-hd-31Y" firstAttribute="bottom" secondItem="jMN-2f-awc" secondAttribute="bottom" constant="24" id="R2y-cP-sHP"/>
                             <constraint firstItem="Ngb-cb-zpY" firstAttribute="top" secondItem="f2K-Gd-U3X" secondAttribute="bottom" constant="19" id="Sjl-DK-ipv"/>
                             <constraint firstItem="r6k-hd-31Y" firstAttribute="trailing" secondItem="f2K-Gd-U3X" secondAttribute="trailing" constant="37" id="Tka-mW-sdg"/>
+                            <constraint firstItem="jMN-2f-awc" firstAttribute="top" secondItem="7cu-eK-moU" secondAttribute="bottom" constant="36" id="U1l-xy-K4T"/>
                             <constraint firstItem="f2K-Gd-U3X" firstAttribute="leading" secondItem="r6k-hd-31Y" secondAttribute="leading" constant="37" id="gq0-Rc-Vkv"/>
                             <constraint firstItem="yav-Za-Xmk" firstAttribute="centerY" secondItem="R4C-d5-7RY" secondAttribute="centerY" multiplier="0.5" id="nrr-WK-3zE"/>
                             <constraint firstItem="jMN-2f-awc" firstAttribute="leading" secondItem="Ngb-cb-zpY" secondAttribute="leading" id="oIq-pa-WZe"/>
@@ -236,6 +275,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
