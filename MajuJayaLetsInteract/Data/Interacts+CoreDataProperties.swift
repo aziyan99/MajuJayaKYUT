@@ -16,11 +16,9 @@ extension Interacts {
         return NSFetchRequest<Interacts>(entityName: "Interacts")
     }
 
-    @NSManaged public var count: Int16
     @NSManaged public var name: String?
     @NSManaged public var reflections: String?
     @NSManaged public var date: Date?
-    @NSManaged public var id: String?
 
 }
 

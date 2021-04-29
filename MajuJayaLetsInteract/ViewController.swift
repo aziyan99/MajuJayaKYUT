@@ -6,55 +6,31 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var initCount: Int = 0
     var currentProgress: Float = 0.0
-    private var todayCount = [Interacts]()
+    private var todayInteractions = [Interacts]()
     
-    var debugData = [Interacts]()
-
     @IBOutlet weak var topDateLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var countProgressView: UIProgressView!
     @IBOutlet weak var bottomCountLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        updateTopDate()
-        countLabel.text = "\(initCount)"
-        countProgressView.setProgress(0, animated: true)
-        bottomCountLabel.text = "\(initCount) of 6"
-        
-        
-        //setupTodayCount()
         fetchInteractionsData()
+        prepareView()
         
-//        let tes = todayCount.filter { $0.isEqual() }
-//        print(tes)
-        
-//        let cast = ["Vivien", "Marlon", "Kim", "Karl"]
-//        let shortNames = cast.filter { $0.count < 5 }
-//        print(shortNames)
-        
-        //testDate()
-        
-//        for data in todayCount {
-//            let today = Date()
-//            if(today == data.date){
-//                print("date: \(data.date)")
-//            }else{
-//                print("sini")
-//                print("\(data.date)")
-//            }
-//        }
     }
 
-
+    /*
+     * Items related function
+     */
+    
     @IBAction func didTapCountInteractButton(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: "Add interaction count", preferredStyle: .actionSheet)
         let countButton = UIAlertAction(title: "Wohoo!!!", style: .default, handler: increaseCount)
@@ -67,106 +43,74 @@ class ViewController: UIViewController {
         
     }
     
-    func updateTopDate() {
+    /*
+     * Define function
+     */
+    func prepareView(){
+        // Updating date
         let today = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, d MMM"
         let dateString: String = dateFormatter.string(from: today)
-        
         topDateLabel.text = dateString.uppercased()
-    }
-    
-    func increaseCount(alert: UIAlertAction!) {
-        initCount += 1
-        countLabel.text = "\(initCount)"
         
-        bottomCountLabel.text = "\(initCount) of 6"
+        // updating count and progress
+        countLabel.text = "\(todayInteractions.count)"
+        bottomCountLabel.text = "\(todayInteractions.count) of 6"
         
         let perProgress = countProgressView.frame.width / 6
-        currentProgress += Float(perProgress)
-        
-        print("length progress: \(countProgressView.frame.width)")
-        print("increase: \(perProgress)")
-        print("current progress: \(currentProgress)")
+        currentProgress = Float(todayInteractions.count) * Float(perProgress)
         
         countProgressView.setProgress(currentProgress / Float(countProgressView.frame.width), animated: false)
         
-        //storeTodayCount()
-        
+    }
+    
+    
+    func increaseCount(alert: UIAlertAction!) {
+        storeInteractionData()
     }
     
     /*
-     Core data function
+     * Core data function
      */
     
-    func setupTodayCount() {
-        let newCount = Interacts(context: context)
-        newCount.name = ""
-        newCount.reflections = ""
-        newCount.count = 0
-        newCount.date = Date()
+    func fetchInteractionsData(){
+        let fetchRequest = NSFetchRequest<Interacts>(entityName: "Interacts")
+        
+        // Get the current calendar with local time zone
+        let calendar = Calendar.current
+
+        // Get today's beginning & end
+        let dateFrom = calendar.startOfDay(for: Date()) // eg. 2016-10-10 00:00:00
+        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
+        // Note: Times are printed in UTC. Depending on where you live it won't print 00:00:00 but it will work with UTC times which can be converted to local time
+
+        // Set predicate as date being today's date
+        let fromPredicate = NSPredicate(format: "date >= %@", dateFrom as NSDate)
+        let toPredicate = NSPredicate(format: "date < %@", dateTo! as NSDate)
+        let datePredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, toPredicate])
+        fetchRequest.predicate = datePredicate
         
         do{
-            try context.save()
+            todayInteractions = try context.fetch(fetchRequest)
         }catch{
-            //error
+            print("Error when getting data")
         }
     }
     
-    func fetchInteractionsData(){
-        //let todayDate = Date()
-        do{
-            todayCount = try context.fetch(Interacts.fetchRequest())
-        }catch{
-            //error
-        }
-        print(todayCount)
-    }
-    
-    func getTodayCount(){
-        //
-    }
-    
-    func storeTodayCount() {
+    func storeInteractionData() {
         let newCount = Interacts(context: context)
         newCount.name = ""
         newCount.reflections = ""
-        newCount.count = 0
         newCount.date = Date()
-        newCount.id = UUID().uuidString
         
         do{
             try context.save()
             fetchInteractionsData()
+            prepareView()
         }catch{
-            //error
+            print("Error when saving data")
         }
-        
-        print(todayCount)
-    }
-    
-    func testDate() {
-//        let today = Date()
-//        print(today)
-//        let modifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-//        print(modifiedDate)
-//
-//        let newData = Interacts(context: context)
-//        newData.name = "tes"
-//        newData.reflections = "tes"
-//        newData.count = 0
-//        newData.id = UUID().uuidString
-//        newData.date = modifiedDate
-//
-//        do{
-//            try context.save()
-//            fetchInteractionsData()
-//        }catch{
-//        //error
-//        }
-//        print(todayCount)
-//
-        //context.fetch(Interacts.fetchRequest())
     }
 }
 
