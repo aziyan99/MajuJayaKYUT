@@ -82,6 +82,8 @@ class ViewController: UIViewController {
         if(CGFloat(currentProgress) <= countProgressView.frame.width){
             countProgressView.setProgress(0.0, animated: false)
             countProgressView.setProgress(currentProgress / Float(countProgressView.frame.width), animated: false)
+            countLabel.textColor = .systemBlue
+            bottomMessageCountLabel.textColor = .systemBlue
         }
         else if(CGFloat(currentProgress) > countProgressView.frame.width && CGFloat(currentProgress) <= (countProgressView.frame.width * 5.0)){
             countProgressView.trackTintColor = .systemBlue
@@ -91,6 +93,7 @@ class ViewController: UIViewController {
             countProgressView.setProgress((currentProgress - Float(countProgressView.frame.width)) / (Float(countProgressView.frame.width * 5.0) - (Float(countProgressView.frame.width))), animated: false)
 
             countLabel.textColor = .systemOrange
+            bottomMessageCountLabel.textColor = .systemOrange
 
         }else if (CGFloat(currentProgress) > countProgressView.frame.width * 5.0){
             countProgressView.trackTintColor = .systemOrange
@@ -100,6 +103,7 @@ class ViewController: UIViewController {
             countProgressView.setProgress((currentProgress - Float(countProgressView.frame.width * 5.0)) / (Float(countProgressView.frame.width * 10.0) - (Float(countProgressView.frame.width) * 5.0)), animated: false)
 
             countLabel.textColor = .systemPink
+            bottomMessageCountLabel.textColor = .systemPink
         }
     }
     
