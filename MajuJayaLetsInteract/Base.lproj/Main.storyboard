@@ -221,9 +221,33 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-ik-JLk">
                                 <rect key="frame" x="16" y="642" width="358" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKY-vE-CZr">
+                                        <rect key="frame" x="8" y="26" width="70" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="iR8-62-80P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srh-d4-OGT">
+                                        <rect key="frame" x="86" y="33.666666666666629" width="271" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Fv2-dz-YMp"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="Vmy-z1-sdc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
+                                    <constraint firstItem="uKY-vE-CZr" firstAttribute="centerY" secondItem="vI7-ik-JLk" secondAttribute="centerY" id="3Os-ac-Nec"/>
+                                    <constraint firstItem="Srh-d4-OGT" firstAttribute="centerY" secondItem="uKY-vE-CZr" secondAttribute="centerY" id="XhR-8G-B7U"/>
+                                    <constraint firstItem="uKY-vE-CZr" firstAttribute="leading" secondItem="vI7-ik-JLk" secondAttribute="leadingMargin" id="ZHJ-cs-DNi"/>
                                     <constraint firstAttribute="height" constant="88" id="bXQ-S5-4ye"/>
+                                    <constraint firstItem="uKY-vE-CZr" firstAttribute="top" secondItem="vI7-ik-JLk" secondAttribute="top" constant="26" id="jxe-j2-oMy"/>
+                                    <constraint firstItem="Srh-d4-OGT" firstAttribute="leading" secondItem="uKY-vE-CZr" secondAttribute="trailing" constant="8" symbolic="YES" id="vCr-zu-R90"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -275,6 +299,8 @@
                     </view>
                     <connections>
                         <outlet property="bottomCountLabel" destination="la6-YX-aoQ" id="Mi2-1M-i3y"/>
+                        <outlet property="bottomMessageCountLabel" destination="uKY-vE-CZr" id="hCB-dA-i5S"/>
+                        <outlet property="bottomMessageTextLabel" destination="Srh-d4-OGT" id="SFt-3s-PYu"/>
                         <outlet property="countLabel" destination="8QO-JB-JbH" id="QRg-wH-4aZ"/>
                         <outlet property="countProgressView" destination="BjG-u7-H63" id="S32-Ej-aoY"/>
                         <outlet property="imgBadges1" destination="NPA-to-Brz" id="0Pv-oE-UEV"/>

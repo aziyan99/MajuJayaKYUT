@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     var currentProgress: Float = 0.0
     private var todayInteractions = [Interacts]()
     
-    
     @IBOutlet weak var topDateLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var countProgressView: UIProgressView!
     @IBOutlet weak var bottomCountLabel: UILabel!
+    @IBOutlet weak var bottomMessageCountLabel: UILabel!
+    @IBOutlet weak var bottomMessageTextLabel: UILabel!
+    
     
     /*
      * temp variable
@@ -64,6 +66,10 @@ class ViewController: UIViewController {
         dateFormatter.dateFormat = "EEEE, d MMM"
         let dateString: String = dateFormatter.string(from: today)
         topDateLabel.text = dateString.uppercased()
+        
+        // updating bottom message
+        bottomMessageCountLabel.text = "\(todayInteractions.count)"
+        bottomMessageTextLabel.text = " is more than \(todayInteractions.count - 1), but \(todayInteractions.count + 1) is better"
         
         // updating count and progress
         countLabel.text = "\(todayInteractions.count)"
