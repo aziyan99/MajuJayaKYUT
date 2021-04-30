@@ -218,6 +218,9 @@
                                 <rect key="frame" x="270" y="371" width="104" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Show More"/>
+                                <connections>
+                                    <segue destination="WPe-E6-Iid" kind="show" id="dy3-7A-V5Y"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-ik-JLk">
                                 <rect key="frame" x="16" y="642" width="358" height="88"/>
@@ -343,20 +346,21 @@
             </objects>
             <point key="canvasLocation" x="-711" y="-127"/>
         </scene>
-        <!--View Controller-->
+        <!--Badges View Controller-->
         <scene sceneID="GKq-uk-VBw">
             <objects>
-                <viewController id="WPe-E6-Iid" sceneMemberID="viewController">
+                <viewController id="WPe-E6-Iid" customClass="BadgesViewController" customModule="MajuJayaLetsInteract" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RSb-vb-N8g">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="1fO-eS-Tm8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ywf-fV-RQy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkI-kJ-m8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="203"/>
+            <point key="canvasLocation" x="1066" y="226"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

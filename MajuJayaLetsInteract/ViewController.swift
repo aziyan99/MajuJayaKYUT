@@ -64,8 +64,8 @@ class ViewController: UIViewController {
         let today = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, d MMM"
-        let dateString: String = dateFormatter.string(from: today)
-        topDateLabel.text = dateString.uppercased()
+        let dateString: String = dateFormatter.string(from: today).uppercased()
+        topDateLabel.text = "\(dateString)"
         
         // updating bottom message
         bottomMessageCountLabel.text = "\(todayInteractions.count)"

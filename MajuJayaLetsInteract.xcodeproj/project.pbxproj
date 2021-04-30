@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085C39CB263B96CD00410559 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C39CA263B96CD00410559 /* BadgesViewController.swift */; };
 		08D2EED92639B4AA0013D5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EED82639B4AA0013D5EF /* AppDelegate.swift */; };
 		08D2EEDB2639B4AA0013D5EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEDA2639B4AA0013D5EF /* SceneDelegate.swift */; };
 		08D2EEDD2639B4AA0013D5EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EEDC2639B4AA0013D5EF /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085C39CA263B96CD00410559 /* BadgesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
 		08D2EED52639B4AA0013D5EF /* MajuJayaLetsInteract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajuJayaLetsInteract.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D2EED82639B4AA0013D5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08D2EEDA2639B4AA0013D5EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				08D2EEDA2639B4AA0013D5EF /* SceneDelegate.swift */,
 				08D2EEDC2639B4AA0013D5EF /* ViewController.swift */,
 				08D2EEDE2639B4AA0013D5EF /* Main.storyboard */,
+				085C39CA263B96CD00410559 /* BadgesViewController.swift */,
 				FCF6C0C72639C4CE003C3D38 /* Onboarding.storyboard */,
 				FCF6C0C92639CD41003C3D38 /* OnboardingController */,
 				FCF6C0DA2639E07C003C3D38 /* ConciergeViewController.swift */,
@@ -195,6 +198,7 @@
 				FCF6C0DB2639E07C003C3D38 /* ConciergeViewController.swift in Sources */,
 				08D2EEE32639B4AA0013D5EF /* MajuJayaLetsInteract.xcdatamodeld in Sources */,
 				FCF6C0D92639DD14003C3D38 /* LandscapeManager.swift in Sources */,
+				085C39CB263B96CD00410559 /* BadgesViewController.swift in Sources */,
 				FCF6C0DD2639E246003C3D38 /* SecondStepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
