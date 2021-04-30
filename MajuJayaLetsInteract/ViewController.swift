@@ -109,37 +109,37 @@ class ViewController: UIViewController {
     func prepareBadges() {
         let todayCount = todayInteractions.count
         if(todayCount >= 1){
-            imgBadges1.image = UIImage(named: "sample")
+            imgBadges1.image = UIImage(named: "initiator")
         }
         if(todayCount >= 3){
-            imgBadges1.image = UIImage(named: "sample")
-            imgBadges2.image = UIImage(named: "sample")
+            imgBadges1.image = UIImage(named: "initiator")
+            imgBadges2.image = UIImage(named: "participator")
         }
         if(todayCount >= 6){
-            imgBadges1.image = UIImage(named: "sample")
-            imgBadges2.image = UIImage(named: "sample")
-            imgBadges3.image = UIImage(named: "sample")
+            imgBadges1.image = UIImage(named: "initiator")
+            imgBadges2.image = UIImage(named: "participator")
+            imgBadges3.image = UIImage(named: "actor")
         }
         if(todayCount >= 12){
-            imgBadges1.image = UIImage(named: "sample")
-            imgBadges2.image = UIImage(named: "sample")
-            imgBadges3.image = UIImage(named: "sample")
-            imgBadges4.image = UIImage(named: "sample")
+            imgBadges1.image = UIImage(named: "initiator")
+            imgBadges2.image = UIImage(named: "participator")
+            imgBadges3.image = UIImage(named: "actor")
+            imgBadges4.image = UIImage(named: "inspirator")
         }
         if(todayCount >= 18){
-            imgBadges1.image = UIImage(named: "sample")
-            imgBadges2.image = UIImage(named: "sample")
-            imgBadges3.image = UIImage(named: "sample")
-            imgBadges4.image = UIImage(named: "sample")
-            imgBadges5.image = UIImage(named: "sample")
+            imgBadges1.image = UIImage(named: "initiator")
+            imgBadges2.image = UIImage(named: "participator")
+            imgBadges3.image = UIImage(named: "actor")
+            imgBadges4.image = UIImage(named: "inspirator")
+            imgBadges5.image = UIImage(named: "simbo")
         }
         if(todayCount >= 24){
-            imgBadges1.image = UIImage(named: "sample")
-            imgBadges2.image = UIImage(named: "sample")
-            imgBadges3.image = UIImage(named: "sample")
-            imgBadges4.image = UIImage(named: "sample")
-            imgBadges5.image = UIImage(named: "sample")
-            imgBadges6.image = UIImage(named: "sample")
+            imgBadges1.image = UIImage(named: "initiator")
+            imgBadges2.image = UIImage(named: "participator")
+            imgBadges3.image = UIImage(named: "actor")
+            imgBadges4.image = UIImage(named: "inspirator")
+            imgBadges5.image = UIImage(named: "simbo")
+            imgBadges6.image = UIImage(named: "orator")
             print("breakkkkk!!!!")
         }
     }
